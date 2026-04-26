@@ -410,14 +410,13 @@
 
     /* ── PRICING ── */
     .pricing { background: white; }
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  margin-top: 3rem;
-  max-width: 1000px; /* increase this */
-  margin-inline: auto; /* center horizontally */
-}
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+      max-width: 700px;
+    }
     .price-card {
       border-radius: 24px;
       padding: 2rem;
@@ -607,7 +606,7 @@
       <div class="hero-badge">Now on Google Play</div>
       <h1>Read your soil.<br><em>Know what to grow.</em></h1>
       <p class="hero-sub">
-        A mobile field assistant for colorimetric soil testing using standard STK reagents. Implements a laboratory-standard two-step pH protocol (CPR → BCG/BTB) and measures NPK nutrients — entirely offline, with AI-ready structured output.
+        A mobile field assistant that brings laboratory precision to soil testing — offline-first. Reads pH and NPK color strips more accurately than the human eye, then generates a structured technical summary ready for any AI model.
       </p>
       <div class="hero-actions">
         <a href="https://play.google.com/store/apps/details?id=com.phpthinky.stkcamera" class="btn-primary" id="download">
@@ -789,23 +788,23 @@
     <div class="steps-grid">
       <div class="step">
         <div class="step-num">01</div>
-        <div class="step-title">Prepare your sample</div>
-        <div class="step-desc">Collect a soil sample and prepare your STK reagents. The app walks you through each protocol step — CPR for Step 1 pH, then BCG or BTB for Step 2 — following laboratory-standard colorimetric procedures.</div>
+        <div class="step-title">Run your soil test</div>
+        <div class="step-desc">Use any standard Soil Test Kit (STK). Collect your soil sample and follow the kit's procedure to develop the color strips.</div>
       </div>
       <div class="step">
         <div class="step-num">02</div>
-        <div class="step-title">Two-step pH test</div>
-        <div class="step-desc">Capture the CPR indicator. The app auto-decides the next indicator: BCG (acidic soils, pH ≤ 5.4) or BTB (alkaline soils, pH ≥ 5.8). A built-in RETEST guard flags inconclusive readings (5.4–5.8 range).</div>
+        <div class="step-title">Capture the strip</div>
+        <div class="step-desc">Point your camera at the color result pad. The CIEDE2000 engine extracts an objective color reading — more consistent than the human eye.</div>
       </div>
       <div class="step">
         <div class="step-num">03</div>
-        <div class="step-title">Capture NPK readings</div>
-        <div class="step-desc">Photograph each NPK reagent: Diphenylamine (N), Barton's Reagent (P), and Sodium Tetraphenylboron (K). One capture per nutrient. CIEDE2000 matches the color to a calibrated ppm value.</div>
+        <div class="step-title">Get your chemical data</div>
+        <div class="step-desc">Instantly see your pH, Nitrogen, Phosphorus, and Potassium levels — extracted directly from the strip with no guesswork.</div>
       </div>
       <div class="step">
         <div class="step-num">04</div>
-        <div class="step-title">Results & AI recommendations</div>
-        <div class="step-desc">Review your fertility score, NPK status, and pH classification with color swatches. Copy the structured AI prompt to clipboard and paste into Claude or ChatGPT for fertilizer and crop guidance.</div>
+        <div class="step-title">Copy & ask any AI</div>
+        <div class="step-desc">The app generates a structured technical summary. Copy it to clipboard and paste into ChatGPT, Claude, or any AI for immediate fertilizer and crop recommendations.</div>
       </div>
     </div>
   </div>
@@ -819,31 +818,19 @@
     <p class="section-desc">Designed for agriculture students, farm technicians, and researchers who need accurate chemical data — not guesswork.</p>
     <div class="feat-grid">
       <div class="feat-card">
-        <div class="feat-icon">🧪</div>
-        <div class="feat-title">Two-Step pH Protocol</div>
-        <div class="feat-desc">
-          Follows laboratory-standard colorimetric procedures. Step 1 uses CPR indicator; the app auto-routes Step 2 to BCG (pH ≤ 5.4, acidic) or BTB (pH ≥ 5.8, alkaline). A built-in RETEST guard flags inconclusive readings in the 5.4–5.8 transition range.
-        </div>
-      </div>
-      <div class="feat-card">
         <div class="feat-icon">🎨</div>
         <div class="feat-title">CIEDE2000 Color Matching</div>
-        <div class="feat-desc">Industry-standard perceptual color difference algorithm. Applied to both pH indicator colors (CPR / BCG / BTB) and NPK reagents (Diphenylamine, Barton's, Sodium Tetraphenylboron) for objective, lighting-tolerant readings.</div>
-      </div>
-      <div class="feat-card">
-        <div class="feat-icon">📷</div>
-        <div class="feat-title">Camera Focus &amp; Gallery Picker</div>
-        <div class="feat-desc">A circular guide overlays the viewfinder so you can align the color strip precisely before capturing. If the camera fails to open, the gallery picker launches automatically — no test session is lost.</div>
+        <div class="feat-desc">Industry-standard color difference algorithm that reads pH and NPK strips with greater consistency than the human eye — even in varying field lighting.</div>
       </div>
       <div class="feat-card">
         <div class="feat-icon">💬</div>
         <div class="feat-title">Structured Prompt Generator</div>
-        <div class="feat-desc">Converts your soil data into a clean technical summary. Copy to clipboard and paste into Claude, ChatGPT, or Gemini for fertilizer recommendations, crop suitability, and pH amendment guidance.</div>
-        <pre style="margin-top:1rem;background:var(--cream);border:1px solid var(--border);border-radius:10px;padding:0.85rem;font-size:0.65rem;line-height:1.7;color:var(--muted);overflow-x:auto;white-space:pre-wrap;font-family:'DM Sans',monospace;">### SOIL ANALYSIS REPORT (STK)
+        <div class="feat-desc">Converts your soil chemical data into a clean, technical summary. Copy to clipboard and paste into any external AI model for fertilizer and crop recommendations.</div>
+        <pre style="margin-top:1rem;background:var(--cream);border:1px solid var(--border);border-radius:10px;padding:0.85rem;font-size:0.65rem;line-height:1.7;color:var(--muted);overflow-x:auto;white-space:pre-wrap;font-family:'DM Sans',monospace;">### SOIL ANALYSIS REPORT
 Target Crop: PATOLA
 Field Area: 1 hectare
 ------------------------------------------
-### TEST STRIP RESULTS
+### TEST STRIP RESULTS (STK)
 - Soil pH: 4.2 (Extremely Acidic)
 - Nitrogen (N): MEDIUM
 - Phosphorus (P): LOW
@@ -857,40 +844,40 @@ Field Area: 1 hectare
       </div>
       <div class="feat-card">
         <div class="feat-icon">📊</div>
-        <div class="feat-title">Results with Color Swatches</div>
-        <div class="feat-desc">Full macro-nutrient profile — pH, Nitrogen (ppm), Phosphorus (ppm), and Potassium (ppm) — each shown alongside the extracted indicator color swatch for full traceability of every reading.</div>
+        <div class="feat-title">NPK + pH Results</div>
+        <div class="feat-desc">Full macro-nutrient profile: pH, Nitrogen, Phosphorus, and Potassium — the four core indicators for soil health and crop readiness.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">🌍</div>
+        <div class="feat-title">Global Compatibility</div>
+        <div class="feat-desc">Works with any standard soil test kit worldwide. No geographic restriction on the free version — usable in any country.</div>
       </div>
       <div class="feat-card">
         <div class="feat-icon">📋</div>
         <div class="feat-title">Fertilizer Calculator</div>
-        <div class="feat-desc">Select a crop and farm area. The calculator recommends Urea (46-0-0), TSP (0-46-0), MOP (0-0-60), and Dolomitic Lime based on your NPK status — with per-hectare amounts for basal and top-dressing.</div>
+        <div class="feat-desc">Input your crop, area, and location. Get structured fertilizer recommendations — type, amount per hectare, and application schedule.</div>
       </div>
       <div class="feat-card">
         <div class="feat-icon">🎛️</div>
         <div class="feat-title">Custom Color Calibration</div>
-        <div class="feat-desc">Every STK brand prints slightly different color strips. Calibrate the pH and NPK reference charts to match your exact kit. Settings are saved locally — no two farms need the same setup.</div>
+        <div class="feat-desc">Every STK brand has slightly different color strips. Calibrate the reference colors for pH and NPK to match your exact kit — free, saved locally on your device. No two farms need the same setup.</div>
       </div>
       <div class="feat-card">
         <div class="feat-icon">🌾</div>
         <div class="feat-title">Sample Management</div>
-        <div class="feat-desc">Record farmer name, address, farm location, and test dates per sample. Analyzed samples can be Reset &amp; Retested (costs 1 credit) to prevent credit bypass. Export soil reports as gallery images anytime.</div>
+        <div class="feat-desc">Record complete soil sample details — farmer name, address, farm location, date tested, and date submitted. Attach crop targets and thresholds per variety for traceable, professional field documentation.</div>
       </div>
     </div>
   </div>
 </section>
+
 <!-- PRICING -->
 <section class="pricing" id="pricing">
   <div class="section-inner">
     <div class="section-tag">Credits & Pricing</div>
     <div class="section-title">Start free. Scale when ready.</div>
-    <p class="section-desc">
-      Every install includes 10 free analysis credits. Each new sample uses 1 credit.
-      Retesting an analyzed sample also uses 1 credit. Top up anytime — no subscription required.
-    </p>
-
+    <p class="section-desc">Every install comes with 10 free analysis credits. Top up anytime with token-based credits — no subscription required.</p>
     <div class="pricing-grid">
-
-      <!-- FREE -->
       <div class="price-card">
         <div class="price-plan">Free</div>
         <div class="price-amount"><span class="free-label">10</span></div>
@@ -903,41 +890,22 @@ Field Area: 1 hectare
           <li>Save reports to gallery</li>
           <li>Works globally</li>
         </ul>
-        <a href="https://play.google.com/apps/test/com.phpthinky.stkcamera/26" class="price-btn outline">Download Free</a>
+        <a href="https://play.google.com/apps/test/com.phpthinky.stkcamera/11" class="price-btn outline">Download Free</a>
       </div>
-
-      <!-- ₱10 -->
       <div class="price-card featured">
-        <div class="price-plan">Starter Pack</div>
-        <div class="price-amount"><sup>₱</sup>10</div>
-        <div class="price-period">one-time purchase</div>
+        <div class="price-plan">Top-up Credits</div>
+        <div class="price-amount"><sup>₱</sup>—</div>
+        <div class="price-period">token-based, no subscription</div>
         <hr class="price-divider"/>
         <ul class="price-features">
-          <li>Small credit top-up</li>
-          <li>Secure purchase via Google Play</li>
-          <li>Credits added to your account</li>
-          <li>Instant credit allocation</li>
+          <li>Everything in Free</li>
+          <li>Purchase via GCash</li>
+          <li>Redeem with unique token</li>
+          <li>Credits added instantly</li>
           <li>No expiry on unused credits</li>
         </ul>
-        <a href="https://play.google.com/store/apps/details?id=com.phpthinky.stkcamera" class="price-btn solid">Buy ₱10</a>
+        <a href="https://play.google.com/store/apps/details?id=com.phpthinky.stkcamera" class="price-btn solid">Get Credits</a>
       </div>
-
-      <!-- ₱50 -->
-      <div class="price-card">
-        <div class="price-plan">Value Pack</div>
-        <div class="price-amount"><sup>₱</sup>50</div>
-        <div class="price-period">one-time purchase</div>
-        <hr class="price-divider"/>
-        <ul class="price-features">
-          <li>Larger credit top-up</li>
-          <li>Secure purchase via Google Play</li>
-          <li>Credits added to your account</li>
-          <li>Instant credit allocation</li>
-          <li>No expiry on unused credits</li>
-        </ul>
-        <a href="https://play.google.com/store/apps/details?id=com.phpthinky.stkcamera" class="price-btn outline">Buy ₱50</a>
-      </div>
-
     </div>
   </div>
 </section>
@@ -964,7 +932,7 @@ Field Area: 1 hectare
       </div>
       <div>
         <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.4rem;">4. Data Ownership</h3>
-        <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;">All data you create in this app is stored locally on your device and belongs to you. The developer has no access to your data.</p>
+        <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;">Your soil sample data, test results, and field records are stored exclusively on your device and belong to you. The developer has no access to your sample data. An anonymous device identifier is sent to our server solely to secure calibration data sync — it contains no personal information and cannot be used to identify you.</p>
       </div>
       <div>
         <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.4rem;">5. Changes</h3>
@@ -979,147 +947,46 @@ Field Area: 1 hectare
   <div class="section-inner">
     <div class="section-tag">Legal</div>
     <div class="section-title">Privacy Policy</div>
-    <p class="section-desc" style="margin-bottom:2rem;">Last updated: April 20 2026 · Your privacy is important to us.</p>
+    <p class="section-desc" style="margin-bottom:2rem;">Last updated: April 2026 · Your privacy is important to us.</p>
+
     <div style="display:flex;flex-direction:column;gap:1.5rem;max-width:720px;">
       <div>
-        <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.4rem;">Data Collection</h3>
-        <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;">STK Soil Analyzer is designed to work primarily offline. We do <strong>not</strong>  collect or transmit personal data for general app usage. All sample data, test results, and settings are stored locally on your device.
-
-<p style="font-size:0.9rem;color:var(--muted);line-height:1.75;">However, limited data is processed when you use specific features such as in-app purchases or optional online services (see below).</p>
-</p>
+        <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.4rem;">Personal Data</h3>
+        <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;">STK Soil Analyzer does <strong>not</strong> collect your name, email address, phone number, location, or any other personally identifiable information. No account or sign-up is required to use the app.</p>
       </div>
       <div>
-        <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.4rem;">No Internet Required</h3>
-        <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;">The core app functions fully offline. An internet connection is only used if you choose to request AI crop recommendations via the structured prompt generator (optional feature).</p>
+        <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.4rem;">Your Soil Data</h3>
+        <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;">All soil samples, test results, and field records you create are stored exclusively on your device. This data is never uploaded to any server and the developer has no access to it.</p>
+      </div>
+      <div>
+        <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.4rem;">Internet Use &amp; Calibration Sync</h3>
+        <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;">Core features (capture, analysis, reports) work fully offline. An internet connection is used in the following cases:</p>
+        <ul style="font-size:0.9rem;color:var(--muted);line-height:2;margin-top:0.5rem;padding-left:1.25rem;">
+          <li><strong>Calibration sync</strong> — on first install and when you tap <em>Update</em> in Settings, the app downloads the latest pH and NPK reference color data from our server. No data is uploaded.</li>
+          <li><strong>Credits &amp; token redemption</strong> — verifying purchase tokens and Google Play transactions.</li>
+          <li><strong>AI recommendations</strong> — optional, you copy a structured prompt to paste into an external AI tool of your choice.</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.4rem;">Anonymous Device Identifier</h3>
+        <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;">To secure calibration sync, the app sends a hardware-generated anonymous device identifier to our server on first install. This identifier contains no personal information and cannot be used to identify you. Our server stores it alongside a randomly generated security token for the sole purpose of authenticating calibration data requests. It is never shared with third parties.</p>
       </div>
       <div>
         <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.4rem;">Camera</h3>
-        <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;">Camera access is used solely to capture photos for color analysis. Photos are processed on-device and are not uploaded or stored beyond the immediate analysis session.</p>
-      </div>
-      <div>
-        <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.4rem;">In-App Purchases</h3>
-        <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;">When you purchase credits via Google Play, our server receives and stores the following to verify and fulfill your purchase: your <strong>device identifier</strong>, the <strong>Google Play purchase token</strong>, the <strong>product ID</strong>, and the <strong>credits granted</strong>. This data is used solely to prevent duplicate processing and maintain your credit balance. It is never sold or shared with third parties.</p>
+        <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;">Camera access is used solely to capture photos for on-device color analysis. Photos are processed locally and are never uploaded or stored beyond the immediate analysis session.</p>
       </div>
       <div>
         <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.4rem;">Third-Party Services</h3>
-        <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;">Optional AI recommendations are generated via external AI models (e.g. Claude, ChatGPT). No data is stored by these services beyond your session. Usage of these services is entirely at your discretion. In-app purchase verification is handled via the <strong>Google Play Developer API</strong> — purchases are validated server-side to ensure authenticity.</p>
+        <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;">The optional AI recommendation feature generates a structured text prompt that you copy and paste into an external AI model (e.g. Claude, ChatGPT) of your choice. No soil data is sent to these services by this app — usage is entirely at your discretion and governed by each service's own privacy policy.</p>
       </div>
       <div>
-        <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.4rem;">Future Account Registration <span style="font-size:0.75rem;font-weight:600;background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;border-radius:4px;padding:2px 8px;margin-left:6px;vertical-align:middle;">Upcoming</span></h3>
-        <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;">A future update will introduce an <strong>optional</strong> account registration feature. You may provide your email address to back up and sync your credits across devices. Registration will always be optional — the app remains fully functional without an account. If registered, your email is used solely for account identification and credit sync, and will never be sold or shared with third parties.</p>
+        <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.4rem;">Data Retention</h3>
+        <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;">The anonymous device identifier stored on our server is retained for as long as you use the app to allow calibration sync. Uninstalling the app does not automatically remove it from the server, but it contains no personal information and cannot be linked back to you.</p>
       </div>
-      <div>
-        <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.4rem;">Your Rights</h3>
-        <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;">You may uninstall the app at any time to remove all locally stored data.</p>
-      </div>
-      
       <div>
         <h3 style="font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:0.4rem;">Contact</h3>
-        <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;">For privacy concerns, contact the developer at <a href="https://github.com/phpthinky" target="_blank" style="color:var(--green);">github.com/phpthinky</a>.</p>
+        <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;">For privacy concerns or to request deletion of your device record from our server, contact the developer at <a href="https://github.com/phpthinky" target="_blank" style="color:var(--green);">github.com/phpthinky</a> or via the in-app feedback button.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- GOOGLE PLAY STORE LISTING -->
-<section id="store-listing" style="background:var(--cream);display:none;">
-  <div class="section-inner">
-    <div class="section-tag">Google Play Store Listing</div>
-    <div class="section-title">Store Copy</div>
-    <p class="section-desc" style="margin-bottom:2.5rem;">Ready-to-paste copy for Google Play Console. Character counts shown for each field.</p>
-
-    <div style="display:flex;flex-direction:column;gap:2rem;max-width:760px;">
-
-      <!-- Title -->
-      <div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem;">
-          <h3 style="font-family:'Syne',sans-serif;font-size:0.9rem;font-weight:700;">App Title <span style="font-weight:400;color:var(--muted);">(max 50 chars)</span></h3>
-          <span style="font-size:0.75rem;color:var(--green);font-weight:600;">29 / 50</span>
-        </div>
-        <div style="background:white;border:1.5px solid var(--green);border-radius:12px;padding:1rem 1.25rem;font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--ink);">
-          STK Soil Analyzer – pH &amp; NPK
-        </div>
-      </div>
-
-      <!-- Short description -->
-      <div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem;">
-          <h3 style="font-family:'Syne',sans-serif;font-size:0.9rem;font-weight:700;">Short Description <span style="font-weight:400;color:var(--muted);">(max 80 chars)</span></h3>
-          <span style="font-size:0.75rem;color:var(--green);font-weight:600;">77 / 80</span>
-        </div>
-        <div style="background:white;border:1.5px solid var(--border);border-radius:12px;padding:1rem 1.25rem;font-size:0.9rem;color:var(--ink);line-height:1.5;">
-          Measure soil pH &amp; NPK offline using colorimetric test kits. AI-ready reports.
-        </div>
-      </div>
-
-      <!-- Long description -->
-      <div>
-        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5rem;">
-          <h3 style="font-family:'Syne',sans-serif;font-size:0.9rem;font-weight:700;">Long Description <span style="font-weight:400;color:var(--muted);">(max 4,000 chars)</span></h3>
-          <span style="font-size:0.75rem;color:var(--green);font-weight:600;">≈ 2,400 / 4,000</span>
-        </div>
-        <div style="background:white;border:1.5px solid var(--border);border-radius:12px;padding:1.25rem 1.5rem;font-size:0.85rem;color:var(--muted);line-height:1.85;white-space:pre-wrap;">STK Soil Analyzer is a mobile field tool for agricultural technicians, students, and farmers who need objective soil chemical data — without laboratory equipment.
-
-Use any standard Soil Test Kit (STK). The app guides you through a laboratory-standard colorimetric protocol and analyzes each result using the CIEDE2000 color science algorithm — the same standard used in professional color industries — for readings more consistent than the human eye.
-
-━━━ TWO-STEP pH TEST (LABORATORY STANDARD) ━━━
-
-Step 1: Capture your CPR (Color pH Reagent) indicator color.
-The app automatically evaluates the result:
-
-  • pH ≤ 5.4 → proceed with BCG indicator (acidic soils)
-  • pH ≥ 5.8 → proceed with BTB indicator (alkaline soils)
-  • pH 5.4–5.8 → Inconclusive — reset and retest with a fresh sample
-
-Step 2: Capture the BCG or BTB indicator.
-Final pH is computed and saved to the sample record.
-
-━━━ NPK NUTRIENT ANALYSIS ━━━
-
-• Nitrogen (N) — Diphenylamine reagent
-• Phosphorus (P) — Barton's Reagent
-• Potassium (K) — Sodium Tetraphenylboron reagent
-
-Each nutrient is classified as LOW / MEDIUM / HIGH. The extracted indicator color is shown as a swatch alongside each reading for full traceability.
-
-━━━ AI-READY TECHNICAL SUMMARY ━━━
-
-Once all parameters are captured, the app generates a structured soil report prompt. Copy it to clipboard and paste into Claude, ChatGPT, or Gemini to receive fertilizer recommendations, crop suitability analysis, and pH amendment guidance — no integration required.
-
-━━━ KEY FEATURES ━━━
-
-✓ Two-step pH protocol following laboratory standards
-✓ CIEDE2000 color science for objective, consistent readings
-✓ NPK classification: LOW / MEDIUM / HIGH per nutrient
-✓ Fertility score and recommended crop matching
-✓ Built-in fertilizer calculator (Urea, TSP, MOP, Dolomitic Lime)
-✓ Camera focus circle guide for precise strip alignment
-✓ Gallery picker fallback if camera fails to open
-✓ Color swatch preview alongside every test result
-✓ Soil Analysis Report — save to device gallery as image
-✓ 100% offline — no internet required for testing
-✓ All data stored locally on your device — zero server access
-✓ No ads, no analytics, no account required
-
-━━━ CREDIT SYSTEM ━━━
-
-Every install includes 10 free analysis credits.
-• Creating a new sample costs 1 credit
-• Retesting an already-analyzed sample costs 1 credit
-• Top up anytime with token-based credits — no subscription, no expiry
-
-━━━ CUSTOM CALIBRATION ━━━
-
-Every STK brand prints slightly different color strips. Adjust the pH and NPK reference color charts to match your specific kit — saved locally on your device.
-
-━━━ PRIVACY ━━━
-
-STK Soil Analyzer does not collect, transmit, or share any personal data. Camera is used only for on-device color extraction. No analytics. No ads.
-
-Developed by Harold V. Rita · github.com/phpthinky
-Part of the TAMAD (Tech-Agri for Mindoro Agile Development) ecosystem · Sablayan, Occidental Mindoro 🇵🇭</div>
-      </div>
-
     </div>
   </div>
 </section>
@@ -1127,7 +994,7 @@ Part of the TAMAD (Tech-Agri for Mindoro Agile Development) ecosystem · Sablaya
 <!-- CTA BAND -->
 <section class="cta-band">
   <h2>Precision readings.<br>Ready for any AI.</h2>
-  <p>Free to download. Works entirely offline. No registration required.</p>
+  <p>Free to download. Core features work offline. No account required.</p>
   <a href="https://play.google.com/store/apps/details?id=com.phpthinky.stkcamera" class="btn-white" target="_blank">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76a2.5 2.5 0 002.6-.18l13.4-7.76-3.08-3.08-12.92 11.02zm-1.68-21.5C1.2 2.6 1 3.04 1 3.6v16.8c0 .56.2 1 .5 1.34l.08.08 9.42-9.42v-.2L1.58 2.18l-.08.08zM20.34 10.62l-2.64-1.54-3.36 3.36 3.36 3.36 2.66-1.54c.76-.44.76-1.14 0-1.58l-.02-.06zM5.78.42L19.18 8.2l-3.08 3.08L3.18.28a2.5 2.5 0 012.6.14z"/></svg>
     Download on Google Play
@@ -1138,14 +1005,12 @@ Part of the TAMAD (Tech-Agri for Mindoro Agile Development) ecosystem · Sablaya
 <footer>
   <div class="footer-brand">STK Soil Analyzer</div>
   <div>Soil Test Kit pH,NPK Analyzer — Built by <a href="https://github.com/phpthinky" target="_blank">phpthinky</a></div>
-  <div>Part of the <strong style="color:rgba(255,255,255,0.7)">TAMAD</strong> (Tech-Agri for Mindoro Agile Development) ecosystem · Sablayan, Occidental Mindoro 🇵🇭</div>
+  <div>Part of the <strong style="color:rgba(255,255,255,0.7)">TAM</strong> (Tech-Agri for Mindoro) ecosystem · Sablayan, Occidental Mindoro 🇵🇭</div>
   <div class="footer-links">
-    <a href="#features">Features</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#store-listing">Store Listing</a>
     <a href="#terms">Terms &amp; Conditions</a>
     <a href="#privacy">Privacy Policy</a>
     <a href="https://github.com/phpthinky" target="_blank">GitHub</a>
+    <a href="/cdn-cgi/l/email-protection#b5ddd0d9d9daf5c5ddc5c1dddcdbdecc9bd1d0c3">Contact</a>
   </div>
   <div style="margin-top:1rem;font-size:0.75rem;">© 2026 phpthinky. All rights reserved.</div>
 </footer>
