@@ -1,70 +1,74 @@
-# STK Camera — Landing Page
+STK Soil Analyzer – Smart NPK Tester & Fertilizer Planner
 
-Official GitHub Pages landing page for **STK Camera**, a mobile app that reads Soil Test Kit (STK) color strips using CIEDE2000 color matching and Claude Vision AI.
+Turn your smartphone into a portable NPK Tester and Soil Analysis laboratory. STK Soil Analyzer combines digital color analysis, AI-powered recommendations, and smart fertilizer planning to help farmers make confident soil management decisions — even offline.
 
-🌐 **Live site:** https://phpthinky.github.io/stk-camera-mobile  *(update once deployed)*
+CHOOSE YOUR MODE
 
----
+Quick Scan (Munsell)
+Reagent-free soil color estimation using the globally recognized Munsell Soil Color System. Point, scan, and get instant NPK estimates, soil classification, and crop suitability in seconds. Free, no credits required.
 
-## About the App
+Lab Scan (Precision NPK & pH)
+Full chemical analysis using STK reagent test kits with CIEDE2000 color matching technology for consistent, accurate readings.
+• Nitrogen (N), Phosphorus (P), Potassium (K) analysis
+• Soil pH with BCG, BTB, and BCP indicator support
+• CIEDE2000 precision color matching — more consistent than visual estimation
 
-STK Camera is a field-ready soil analyzer built for agriculture students, farm technicians, and researchers. Point your camera at any standard soil test kit strip and instantly get pH, Nitrogen, Phosphorus, and Potassium readings — no internet required for core analysis.
+Manual Input
+Already have reagent readings? Skip the camera entirely. Enter your pH and NPK values directly — or tap the 12-color reagent strip to auto-fill values by matching the color you see on the strip. Generates a full Soil Report Card, Fertilizer Schedule, and AI recommendation from your manual inputs.
+• Visual gradient color strip built from your calibration profile colors
+• CIEDE2000 color matching for accurate auto-fill
+• Same full report output as a Lab Scan — shareable and saveable
 
-Built under the **TAM (Tech-Agri for Mindoro)** ecosystem by [@phpthinky](https://github.com/phpthinky), Sablayan, Occidental Mindoro 🇵🇭
+KEY FEATURES
 
----
+📅 Fertilizer Application Scheduler
+Full 3-stage basal and topdressing fertilizer calculator and schedule with bag quantities per hectare — matched to your soil nutrient levels and chosen crop.
 
-## Tech Stack (App)
+🌤 Weather Advisory
+Check real-time weather before fertilizer application. Know instantly whether rain, wind, or temperature make conditions safe to apply — and avoid costly nutrient loss.
 
-- **Framework:** Laravel + NativePHP (Android)
-- **Color Engine:** CIEDE2000 algorithm
-- **AI Layer:** Claude Vision API
-- **Database:** SQLite (offline-first)
-- **Credits System:** Token-based, GCash top-up
+📊 Soil Report Cards
+Generate and share professional soil analysis reports with NPK status, pH classification, crop suitability, and fertilizer recommendations.
 
----
+📡 Offline-First Technology
+Designed for real agricultural conditions. All scanning, analysis, and fertilizer calculation works fully offline — no mobile data needed in the field.
 
-## Landing Page Structure
+🤖 AI Agronomic Recommendations (optional)
+Powered by Google Gemini. One tap generates crop-specific fertilizer advice, soil amendment plans, and application schedules based on your actual test results.
 
-```
-index.html        ← Single-file landing page (pure HTML/CSS/JS)
-README.md         ← This file
-```
+WHAT STK ANALYZES
 
-No build tools. No dependencies. Just drop `index.html` and deploy.
+• Nitrogen (N) — High / Medium / Low
+• Phosphorus (P) — High / Medium / Low
+• Potassium (K) — High / Medium / Low
+• Soil pH — Acidic to Alkaline range
+• Soil Classification & Organic Matter Estimate
+• Crop Suitability matched to active crop profiles
 
----
+IDEAL FOR
 
-## Deploy to GitHub Pages
+Farmers · Agronomists · Agriculture Students
+Researchers · Extension Workers · Soil Technicians
+Smart Farming Projects · Precision Agriculture
 
-1. Push `index.html` to your repo's `main` branch
-2. Go to **Settings → Pages**
-3. Set source to `main` branch, `/ (root)`
-4. Save — live in ~60 seconds
+WHY STK?
 
----
+✔ Three input modes — Quick field scan, full Lab analysis, or Manual input
+✔ Fertilizer calculator with application timing
+✔ Weather advisory page with check history
+✔ Shareable professional soil report cards
+✔ Works fully offline in remote farm areas
+✔ Calibration profiles synced from agricultural databases
+✔ Reagent color strip picker — auto-fill from your calibration colors
+✔ AI crop and fertilizer recommendations (Optional)
 
-## Update Checklist
 
-Before going live, update these in `index.html`:
+⚠️ IMPORTANT NOTE
 
-- [ ] Google Play Store URL in the Download buttons
-- [ ] Contact email in footer
-- [ ] Credits top-up pricing (once finalized)
-- [ ] App screenshots (replace phone mockup when ready)
+STK Soil Analyzer is a field guidance tool. Results depend on proper sample preparation, lighting conditions, and reagent kit quality. For critical agricultural decisions, laboratory testing is recommended.
 
----
+🌐 BUILT FOR GLOBAL AGRICULTURE
 
-## Related Repos
+Developed under TAMAD (Tech-Agri for Mindoro Agile Development) to bring practical, accessible technology to the hands of those who feed the world.
 
-| Repo | Description |
-|---|---|
-| `stkcamera-mobile` | NativePHP Android app |
-| `wood-identifier-mobile` | Wood species identifier app |
-| `mobile-gis-leaflet-plugin` | Custom NativePHP GIS plugin |
-
----
-
-## License
-
-© 2026 phpthinky. All rights reserved.
+Understand your soil. Plan your fertilizer. Grow better crops.
