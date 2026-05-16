@@ -606,7 +606,7 @@
       <div class="hero-badge">Now on Google Play</div>
       <h1>Read your soil.<br><em>Know what to grow.</em></h1>
       <p class="hero-sub">
-        A mobile field assistant that brings laboratory precision to soil testing — offline-first. Reads pH and NPK color strips more accurately than the human eye, then generates a structured technical summary ready for any AI model.
+        A mobile field assistant that brings laboratory precision to soil testing — offline-first and completely free. Lab scan, Quick Munsell scan, or Manual input — three ways to get a full soil report with fertilizer schedule and AI recommendations.
       </p>
       <div class="hero-actions">
         <a href="https://play.google.com/store/apps/details?id=com.phpthinky.stkcamera" class="btn-primary" id="download">
@@ -617,12 +617,12 @@
       </div>
       <div class="hero-stats">
         <div class="stat-item">
-          <div class="stat-num">4</div>
-          <div class="stat-label">Nutrients Analyzed</div>
+          <div class="stat-num">3</div>
+          <div class="stat-label">Input Modes</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num">10</div>
-          <div class="stat-label">Free Credits</div>
+          <div class="stat-num">Free</div>
+          <div class="stat-label">No Credits Needed</div>
         </div>
         <div class="stat-item">
           <div class="stat-num">100%</div>
@@ -641,7 +641,7 @@
         </div>
         <div class="float-chip chip-2">
           <span class="chip-dot" style="background:var(--green);"></span>
-          N: Medium
+          Single Test · Free
         </div>
 
         <div class="phone">
@@ -649,7 +649,7 @@
           <div class="phone-screen">
             <div class="phone-header">
               <div class="phone-app-name">STK Soil Analyzer</div>
-              <div class="phone-credits">10 Credits</div>
+              <div class="phone-credits">Free</div>
             </div>
 
             <div class="phone-capture">
@@ -788,23 +788,23 @@
     <div class="steps-grid">
       <div class="step">
         <div class="step-num">01</div>
-        <div class="step-title">Run your soil test</div>
-        <div class="step-desc">Use any standard Soil Test Kit (STK). Collect your soil sample and follow the kit's procedure to develop the color strips.</div>
+        <div class="step-title">Choose your input mode</div>
+        <div class="step-desc">Lab Scan — camera capture with CIEDE2000 color matching. Quick Scan — Munsell soil color estimation, no reagent needed. Manual Input — type your readings directly or tap the reagent color strip to auto-fill.</div>
       </div>
       <div class="step">
         <div class="step-num">02</div>
-        <div class="step-title">Capture the strip</div>
-        <div class="step-desc">Point your camera at the color result pad. The CIEDE2000 engine extracts an objective color reading — more consistent than the human eye.</div>
+        <div class="step-title">Capture or enter values</div>
+        <div class="step-desc">Point the camera at your color strip, or tap the 12-color gradient strip in Manual Input to match what you see on the reagent pad. CIEDE2000 matches more consistently than the human eye.</div>
       </div>
       <div class="step">
         <div class="step-num">03</div>
-        <div class="step-title">Get your chemical data</div>
-        <div class="step-desc">Instantly see your pH, Nitrogen, Phosphorus, and Potassium levels — extracted directly from the strip with no guesswork.</div>
+        <div class="step-title">Get your full soil report</div>
+        <div class="step-desc">Instantly see pH, Nitrogen, Phosphorus, and Potassium levels with a Soil Report Card, fertility score, crop suitability, and a Fertilizer Schedule with exact bag counts per hectare.</div>
       </div>
       <div class="step">
         <div class="step-num">04</div>
-        <div class="step-title">Copy & ask any AI</div>
-        <div class="step-desc">The app generates a structured technical summary. Copy it to clipboard and paste into ChatGPT, Claude, or any AI for immediate fertilizer and crop recommendations.</div>
+        <div class="step-title">Share or ask any AI</div>
+        <div class="step-desc">Share individual report cards as images. Or copy the structured AI prompt to paste into ChatGPT, Claude, or Gemini for crop-specific fertilizer and amendment recommendations.</div>
       </div>
     </div>
   </div>
@@ -863,9 +863,29 @@ Field Area: 1 hectare
         <div class="feat-desc">Every STK brand has slightly different color strips. Calibrate the reference colors for pH and NPK to match your exact kit — free, saved locally on your device. No two farms need the same setup.</div>
       </div>
       <div class="feat-card">
+        <div class="feat-icon">🧪</div>
+        <div class="feat-title">Single Reagent Testing</div>
+        <div class="feat-desc">Test only what you need — choose pH only, Nitrogen only, Phosphorus only, Potassium only, or the full NPK+pH Standard Lab. Each mode generates a focused result card, shareable report, and AI-ready prompt tailored to that single parameter.</div>
+      </div>
+      <div class="feat-card">
         <div class="feat-icon">🌾</div>
         <div class="feat-title">Sample Management</div>
-        <div class="feat-desc">Record complete soil sample details — farmer name, address, farm location, date tested, and date submitted. Attach crop targets and thresholds per variety for traceable, professional field documentation.</div>
+        <div class="feat-desc">Record soil samples with farm location and test date. Auto-assigned STK device ID per sample. Supports multi-sample tracking — tap any record to resume testing or view analyzed results at any time.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">✏️</div>
+        <div class="feat-title">Manual Soil Input</div>
+        <div class="feat-desc">Already have reagent readings? Skip the camera. Enter pH and NPK values directly — or tap the 12-color reagent gradient strip to auto-fill using CIEDE2000 matching calibrated to your active profile. Generates a full Soil Report Card, Fertilizer Schedule, and AI recommendation.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">🌤️</div>
+        <div class="feat-title">Weather Advisory</div>
+        <div class="feat-desc">Dedicated weather page showing current field conditions and an AI-generated farming advisory — ideal for timing fertilizer application. Keeps a history of your recent checks with time-ago labels.</div>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">👑</div>
+        <div class="feat-title">Premium — Watch Video</div>
+        <div class="feat-desc">Watch a rewarded video ad to unlock 24-hour ad-free premium access. No subscription, no purchase required. All analysis features remain free — premium simply removes ads for a day.</div>
       </div>
     </div>
   </div>
@@ -874,37 +894,41 @@ Field Area: 1 hectare
 <!-- PRICING -->
 <section class="pricing" id="pricing">
   <div class="section-inner">
-    <div class="section-tag">Credits & Pricing</div>
-    <div class="section-title">Start free. Scale when ready.</div>
-    <p class="section-desc">Every install comes with 10 free analysis credits. Top up anytime with token-based credits — no subscription required.</p>
+    <div class="section-tag">Pricing</div>
+    <div class="section-title">Completely free.<br>Premium by choice.</div>
+    <p class="section-desc">All soil analysis features are free — no credits, no subscriptions. Watch a short video to unlock 24-hour ad-free premium access.</p>
     <div class="pricing-grid">
-      <div class="price-card">
+      <div class="price-card featured">
         <div class="price-plan">Free</div>
-        <div class="price-amount"><span class="free-label">10</span></div>
-        <div class="price-period">credits included on install</div>
+        <div class="price-amount"><span class="free-label">₱0</span></div>
+        <div class="price-period">forever — no credits needed</div>
         <hr class="price-divider"/>
         <ul class="price-features">
+          <li>Full NPK + pH Standard Lab scan</li>
+          <li>Quick Munsell soil color scan</li>
+          <li>Manual input with reagent color strip</li>
           <li>CIEDE2000 color matching</li>
-          <li>pH, N, P, K analysis</li>
-          <li>Fertilizer calculator (unlimited)</li>
-          <li>Save reports to gallery</li>
-          <li>Works globally</li>
+          <li>Fertilizer Schedule with bag counts</li>
+          <li>Shareable soil report cards</li>
+          <li>Weather advisory page</li>
+          <li>AI agronomic recommendations</li>
+          <li>100% offline — works anywhere</li>
         </ul>
-        <a href="https://play.google.com/apps/test/com.phpthinky.stkcamera/11" class="price-btn outline">Download Free</a>
+        <a href="https://play.google.com/store/apps/details?id=com.phpthinky.stkcamera" class="price-btn solid">Download Free</a>
       </div>
-      <div class="price-card featured">
-        <div class="price-plan">Top-up Credits</div>
-        <div class="price-amount"><sup>₱</sup>—</div>
-        <div class="price-period">token-based, no subscription</div>
+      <div class="price-card">
+        <div class="price-plan">Premium</div>
+        <div class="price-amount" style="font-size:1.6rem;">👑 24hr</div>
+        <div class="price-period">watch a video · no purchase</div>
         <hr class="price-divider"/>
         <ul class="price-features">
           <li>Everything in Free</li>
-          <li>Purchase via GCash</li>
-          <li>Redeem with unique token</li>
-          <li>Credits added instantly</li>
-          <li>No expiry on unused credits</li>
+          <li>Ad-free for 24 hours</li>
+          <li>No boot gate ad on startup</li>
+          <li>No native ads in lists</li>
+          <li>Renew anytime by watching another video</li>
         </ul>
-        <a href="https://play.google.com/store/apps/details?id=com.phpthinky.stkcamera" class="price-btn solid">Get Credits</a>
+        <a href="https://play.google.com/store/apps/details?id=com.phpthinky.stkcamera" class="price-btn outline">Get the App</a>
       </div>
     </div>
   </div>
@@ -963,8 +987,8 @@ Field Area: 1 hectare
         <p style="font-size:0.9rem;color:var(--muted);line-height:1.75;">Core features (capture, analysis, reports) work fully offline. An internet connection is used in the following cases:</p>
         <ul style="font-size:0.9rem;color:var(--muted);line-height:2;margin-top:0.5rem;padding-left:1.25rem;">
           <li><strong>Calibration sync</strong> — on first install and when you tap <em>Update</em> in Settings, the app downloads the latest pH and NPK reference color data from our server. No data is uploaded.</li>
-          <li><strong>Credits &amp; token redemption</strong> — verifying purchase tokens and Google Play transactions.</li>
-          <li><strong>AI recommendations</strong> — optional, you copy a structured prompt to paste into an external AI tool of your choice.</li>
+          <li><strong>Rewarded video ads</strong> — watching a video to activate 24-hour premium access is handled by Google AdMob. AdMob's privacy policy applies to that interaction.</li>
+          <li><strong>AI recommendations</strong> — optional, you copy a structured prompt to paste into an external AI tool of your choice. No soil data is sent automatically.</li>
         </ul>
       </div>
       <div>
